@@ -2,7 +2,7 @@ from urllib.request import Request, urlopen
 import re
 
 def scrape_ispr():
-    #This function scrapes the ispr website and saves the raw HTML to a text file for future processing
+    #This function scrapes the ispr website and if the word missile is in the raw HTML the url will be printed
     base_url = r'https://www.ispr.gov.pk/front/main.asp?o=t-press_release&cat=army&date='
     years = ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
     months = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
