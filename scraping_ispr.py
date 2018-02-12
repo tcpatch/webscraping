@@ -17,7 +17,8 @@ def scrape_ispr():
                     req = Request(full_url, headers={'User-Agent': 'Mozilla/5.0'})
                     webpage = urlopen(req).read()
                     content = str(webpage)
-                    if 'missile' in content:
+                    m = re.search(r'[missile]', content)
+                    if m:
                         print(full_url)
                 except:
                     pass
